@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link href="./_app/immutable/assets/0.C8tTcwPy.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/2.ez2xFI-M.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.CwdZME_K.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/entry.DlpKx8Lj.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/scheduler.CtbWrGNo.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.2FCzw7Er.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.DCJARtjJ.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.DIvMw18i.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/2.BtqaxM3h.js">
+	</head>
+	<body style="height: 100vh;" data-sveltekit-preload-data="hover">
+		  <main id="app" class="svelte-1m7rb4t"><button data-svelte-h="svelte-901pdu">Start Visualizer</button> <div id="show-when-ready" class="svelte-dfk6cu" style="display: none;"><label id="osc-freq-label" for="osc-freq">Fundamental Frequency (Hz): <input type="number" value="440">(A4)</label> <input type="range" id="osc-freq" min="0" max="19980" value="8967"> <fieldset><legend data-svelte-h="svelte-13l2b9e">Harmonics:</legend> <label><input type="checkbox" name="harmonic-2" >
+                Harmonic 2 (Hz): 880 (A5)
+            </label><label><input type="checkbox" name="harmonic-3" >
+                Harmonic 3 (Hz): 1320 (~E6)
+            </label><label><input type="checkbox" name="harmonic-4" >
+                Harmonic 4 (Hz): 1760 (A6)
+            </label><label><input type="checkbox" name="harmonic-5" >
+                Harmonic 5 (Hz): 2200 (---)
+            </label><label><input type="checkbox" name="harmonic-6" >
+                Harmonic 6 (Hz): 2640 (---)
+            </label></fieldset> <h3 data-svelte-h="svelte-1423zw4">Spectral Analyzer</h3> <div id="visualizer" style="height: 250px;"></div> <h3 data-svelte-h="svelte-4tf665">Oscilloscope</h3> <canvas id="osc" style="height: 250px; width:100%;"></canvas> </div> </main> 
+			
+			<script>
+				{
+					__sveltekit_1gekf1s = {
+						base: new URL(".", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.CwdZME_K.js"),
+						import("./_app/immutable/entry/app.2FCzw7Er.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 2],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		
+	</body>
+</html>
